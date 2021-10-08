@@ -40,7 +40,7 @@ let g:ale_fixers = {
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -75,3 +75,10 @@ map <C-n> :NERDTreeToggle<CR>
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "
 colorscheme Tomorrow-Night-Eighties
+
+let NERDTreeShowHidden=1
+
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
